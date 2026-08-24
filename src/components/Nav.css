@@ -1,0 +1,121 @@
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  background: var(--paper);
+  border-bottom: 1px solid var(--rule);
+}
+
+.nav__inner {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  padding-top: 18px;
+  padding-bottom: 18px;
+}
+
+.nav__mark {
+  display: inline-flex;
+  /* width: 144px; */
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 36px;
+  text-decoration: none;
+  color: var(--ink);
+  margin-right: auto;
+  gap: 4px;
+  align-items: center;
+}
+
+.nav__mark img {
+  display: block;
+  width: 100%;
+  height: 44px;
+  object-fit: contain;
+  filter: invert(1);
+  mix-blend-mode: multiply;
+}
+
+.nav__links {
+  display: flex;
+  gap: 26px;
+}
+
+.nav__links a {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--ink-soft);
+  border-bottom: 1px solid transparent;
+  padding-bottom: 2px;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.nav__links a:hover {
+  color: var(--ink);
+  border-color: var(--ink);
+}
+
+.nav__cta {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  color: var(--paper);
+  background: var(--ink);
+  padding: 10px 16px;
+  white-space: nowrap;
+  transition: background 0.15s ease;
+}
+
+.nav__cta:hover {
+  background: var(--red);
+}
+
+.nav__toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+}
+
+.nav__toggle span {
+  width: 22px;
+  height: 2px;
+  background: var(--ink);
+}
+
+.nav__sheet {
+  display: none;
+}
+
+@media (max-width: 780px) {
+  .nav__links,
+  .nav__cta {
+    display: none;
+  }
+  .nav__toggle {
+    display: flex;
+  }
+  .nav__sheet {
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid var(--rule);
+    padding: 10px var(--edge) 18px;
+  }
+  .nav__sheet a {
+    padding: 12px 0;
+    font-family: var(--font-mono);
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 0.06em;
+    text-decoration: none;
+    color: var(--ink);
+    border-bottom: 1px solid var(--rule);
+  }
+}

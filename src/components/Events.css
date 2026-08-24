@@ -1,0 +1,118 @@
+.event {
+  padding-top: clamp(56px, 8vw, 96px);
+  padding-bottom: clamp(56px, 8vw, 96px);
+  border-bottom: 1px solid var(--rule);
+}
+
+.event__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 24px;
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+}
+
+.event__title {
+  font-size: clamp(36px, 5vw, 56px);
+  margin-top: 8px;
+}
+
+.event__note {
+  max-width: 34ch;
+  font-size: 14px;
+  color: var(--ink-soft);
+}
+
+.event__panel {
+  background: var(--event-bg);
+  color: var(--amber);
+  font-family: var(--font-mono);
+  padding: 8px var(--edge);
+  overflow-x: auto;
+}
+
+.event__row {
+  display: grid;
+  grid-template-columns: 1.1fr 2.2fr 0.9fr 0.9fr 1fr;
+  gap: 16px;
+  align-items: center;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--event-bg-soft);
+  min-width: 640px;
+}
+
+.event__row:last-child {
+  border-bottom: none;
+}
+
+.event__row--head {
+  text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  color: var(--amber-dim);
+  border-bottom: 1px solid var(--event-bg-soft);
+}
+
+.event__city {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.event__session {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 24px;
+  color: var(--amber);
+  text-transform: none;
+}
+
+.event__venue {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 20px;
+  color: var(--amber);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  .event__venue_address {
+    font-size: 14px;
+  }
+}
+
+.event__date,
+.event__seats {
+  font-size: 18px;
+  letter-spacing: 0.04em;
+  color: var(--amber);
+}
+
+.event__seats-total {
+  color: var(--amber-dim);
+}
+
+.event__status {
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  padding: 5px 10px;
+  border: 1px solid currentColor;
+  width: fit-content;
+  text-transform: uppercase;
+}
+
+.event__status.is-open {
+  color: #8fd19e;
+}
+
+.event__status.is-few {
+  color: var(--amber);
+}
+
+.event__status.is-full {
+  color: #d97a63;
+}
