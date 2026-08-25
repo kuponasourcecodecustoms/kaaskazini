@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Nav.css";
-import logo from "../data/kaaskazini_logo.jpg";
+import logo from "../../data/kaaskazini_logo.jpg";
 
 const LINKS = [
   { label: "Upcoming Events", href: "#event" },

@@ -63,9 +63,7 @@
 }
 
 .event__session {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
+  display: inline-flex;
   font-family: var(--font-display);
   font-weight: 700;
   font-size: 24px;
@@ -87,32 +85,9 @@
 
 .event__date,
 .event__seats {
+  font-family: var(--font-display);
   font-size: 18px;
   letter-spacing: 0.04em;
   color: var(--amber);
 }
 
-.event__seats-total {
-  color: var(--amber-dim);
-}
-
-.event__status {
-  font-size: 11px;
-  letter-spacing: 0.1em;
-  padding: 5px 10px;
-  border: 1px solid currentColor;
-  width: fit-content;
-  text-transform: uppercase;
-}
-
-.event__status.is-open {
-  color: #8fd19e;
-}
-
-.event__status.is-few {
-  color: var(--amber);
-}
-
-.event__status.is-full {
-  color: #d97a63;
-}

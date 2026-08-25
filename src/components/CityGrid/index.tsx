@@ -1,5 +1,5 @@
 import React from "react";
-import { cities } from "../data/events";
+import { cities } from "../../data/events";
 import "./CityGrid.css";
 
 const CityGrid: React.FC = () => {

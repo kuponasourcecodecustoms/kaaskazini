@@ -88,10 +88,9 @@
 }
 
 .hero__next-meta {
-  font-family: var(--font-mono);
-  font-size: 21px;
+  font-family: var(--font-display);
+  font-size: 24px;
   color: var(--amber);
-  opacity: 0.85;
 }
 
 @media (max-width: 860px) {

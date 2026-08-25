@@ -51,9 +51,9 @@
   border: 1px solid #4a4a42;
   background: var(--event-bg);
   color: var(--amber);
-  font-family: var(--font-mono);
+  font-family: var(--font-display);
   padding: 8px var(--edge);
-  font-size: 13px;
+  font-size: 18px;
   text-transform: uppercase;
   transition: background-color 160ms ease, color 160ms ease;
 }
@@ -65,20 +65,21 @@
 }
 
 .social__social-icon {
-  width: 30px;
-  height: 30px;
-  display: grid;
-  place-items: center;
+  width: 42px;
+  height: 42px;
+  flex: 0 0 42px;
+  box-sizing: border-box;
+  padding: 7px;
+  display: block;
   border: 1px solid currentColor;
   border-radius: 50%;
-  font-family: var(--font-display);
-  font-size: 19px;
-  line-height: 1;
+  object-fit: contain;
+  filter: invert(1);
 }
 
-.social__social-icon--facebook {
-  font-family: Arial, sans-serif;
-  font-weight: 700;
+.social__socials a:hover .social__social-icon,
+.social__socials a:focus-visible .social__social-icon {
+  filter: none;
 }
 
 @media (max-width: 780px) {

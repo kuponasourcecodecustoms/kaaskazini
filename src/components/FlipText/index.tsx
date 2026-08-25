@@ -1,5 +1,5 @@
 import React from "react";
-import FlipDigit from "./FlipDigit";
+import FlipDigit from "../FlipDigit";
 
 interface FlipTextProps {
   text: string;

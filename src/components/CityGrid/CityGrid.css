@@ -4,12 +4,6 @@
   border-bottom: 1px solid var(--rule);
 }
 
-.cities__title {
-  font-size: clamp(30px, 4vw, 44px);
-  margin-top: 10px;
-  margin-bottom: 36px;
-}
-
 .cities__grid {
   list-style: none;
   margin: 0 0 30px;

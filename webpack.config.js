@@ -33,7 +33,7 @@ module.exports = (env, argv) => {
           use: ["style-loader", "css-loader"],
         },
         {
-          test: /\.(png|jpe?g|gif|webp)$/i,
+          test: /\.(png|jpe?g|gif|webp|svg)$/i,
           type: "asset/resource",
           generator: {
             filename: "[name][ext]",
@@ -44,7 +44,7 @@ module.exports = (env, argv) => {
     plugins: [
       new HtmlWebpackPlugin({
         template: "./public/index.html",
-        favicon: "./src/data/kaaskazini_logo.jpg",
+        favicon: "./src/data/favicon.ico",
       }),
     ],
     devServer: {

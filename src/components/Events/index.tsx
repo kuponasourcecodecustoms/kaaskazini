@@ -1,6 +1,6 @@
 import React from "react";
-import { events } from "../data/events";
-import FlipText from "./FlipText";
+import { events } from "../../data/events";
+import FlipText from "../FlipText";
 import "./Events.css";
 
 const Events: React.FC = () => {
@@ -30,23 +30,32 @@ const Events: React.FC = () => {
           {events.map((event, rowIndex) => (
             <div className="event__row" role="row" key={event.id}>
               <span role="cell" className="event__session">
-                {event.title}
+                <FlipText text={event.title} baseDelay={rowIndex * 90} />
               </span>
-              <span className="event__venue">
+              <span role="cell" className="event__venue">
                 <FlipText text={event.venue} baseDelay={rowIndex * 90 + 120} />
-              <br/>
-                <span className="event__venue_address">{event.venueAddress}
-                  </span>
+                <br />
+                <span className="event__venue_address">
+                  <FlipText
+                    text={event.venueAddress}
+                    baseDelay={rowIndex * 90 + 180}
+                  />
+                </span>
               </span>
               <span role="cell" className="event__city">
-                <FlipText text={event.city.toUpperCase()} baseDelay={rowIndex * 90} />
+                <FlipText
+                  text={event.city.toUpperCase()}
+                  baseDelay={rowIndex * 90 + 240}
+                />
               </span>
               <span role="cell" className="event__date">
                 <FlipText text={event.displayDate} baseDelay={rowIndex * 90 + 120} />
               </span>
-             <span role="cell" className="event__date" >
-                 <a href={event.ticketLink}>BUY TICKET NOW</a>
-              </span> 
+              <span role="cell" className="event__date">
+                <a href={event.ticketLink}>
+                  <FlipText text="BUY TICKET NOW" baseDelay={rowIndex * 90 + 300} />
+                </a>
+              </span>
             </div>
           ))}
         </div>
