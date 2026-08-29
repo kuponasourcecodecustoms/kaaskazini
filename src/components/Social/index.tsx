@@ -48,7 +48,7 @@ const Social: React.FC = () => {
         <div className="social__right">
           <nav className="social__socials" aria-label="Kaaskazini social links">
             {socialLinks.map(({ href, label, icon }) => (
-              <a href={href} aria-label={label} key={label}>
+              <a href={href} aria-label={label} key={label} target="_blank" rel="noreferrer">
                 <img className="social__social-icon" src={icon} alt="" aria-hidden="true" />
                 <span>{label}</span>
               </a>

@@ -1,11 +1,14 @@
 import React, { useState } from "react";
 import "./Nav.css";
 import logo from "../../data/kaaskazini_logo.jpg";
+import { events } from "../../data/events";
 
 const LINKS = [
   { label: "Upcoming Events", href: "#event" },
   { label: "About", href: "#about" },
   { label: "Connect With Us", href: "#social" },
+  { label: "Buy Ticket now", href: events[0].ticketLink, external: true },
+  
 ];
 
 const Nav: React.FC = () => {
@@ -21,7 +24,12 @@ const Nav: React.FC = () => {
 
         <nav className="nav__links" aria-label="Primary">
           {LINKS.map((link) => (
-            <a key={link.href} href={link.href}>
+            <a
+              key={link.href}
+              href={link.href}
+              target={link.external ? "_blank" : undefined}
+              rel={link.external ? "noreferrer" : undefined}
+            >
               {link.label}
             </a>
           ))}
@@ -42,7 +50,13 @@ const Nav: React.FC = () => {
       {open && (
         <div className="nav__sheet">
           {LINKS.map((link) => (
-            <a key={link.href} href={link.href} onClick={() => setOpen(false)}>
+            <a
+              key={link.href}
+              href={link.href}
+              target={link.external ? "_blank" : undefined}
+              rel={link.external ? "noreferrer" : undefined}
+              onClick={() => setOpen(false)}
+            >
               {link.label}
             </a>
           ))}

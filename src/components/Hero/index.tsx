@@ -25,8 +25,13 @@ const Hero: React.FC = () => {
             <a className="btn btn--primary" href="#social">
               Connect with us
             </a>
-            <a className="btn btn--ghost" href="#event">
-              See upcoming events
+            <a
+              className="btn btn--ghost"
+              href={next.ticketLink}
+              target="_blank"
+              rel="noreferrer"
+            >
+              Buy Ticket now
             </a>
           </div>
         </div>
