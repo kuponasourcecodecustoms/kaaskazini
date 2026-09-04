@@ -53,7 +53,7 @@ const Events: React.FC = () => {
               </span>
               <span role="cell" className="event__date">
                 <a href={event.ticketLink}>
-                  <FlipText text="BUY TICKET NOW" baseDelay={rowIndex * 90 + 300} />
+                  BUY TICKET NOW
                 </a>
               </span>
             </div>

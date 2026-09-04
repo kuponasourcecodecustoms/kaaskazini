@@ -63,10 +63,10 @@
 }
 
 .event__session {
-  display: inline-flex;
+  display: flex;
   font-family: var(--font-display);
   font-weight: 700;
-  font-size: 24px;
+  font-size: 18px;
   color: var(--amber);
   text-transform: none;
 }
@@ -74,7 +74,7 @@
 .event__venue {
   font-family: var(--font-display);
   font-weight: 700;
-  font-size: 20px;
+  font-size: 18px;
   color: var(--amber);
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -83,11 +83,106 @@
   }
 }
 
-.event__date,
-.event__seats {
+.event__date {
   font-family: var(--font-display);
-  font-size: 18px;
+  font-size: 20px;
   letter-spacing: 0.04em;
   color: var(--amber);
+  a {
+    display: inline;
+  }
+}
+
+@media (max-width: 780px) {
+  .event__panel {
+    padding: 4px 16px;
+  }
+
+  .event__row--head {
+    display: none !important;
+  }
+
+  .event__row {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 10px 16px;
+    align-items: start;
+    min-width: 0;
+    padding: 20px 0 22px;
+  }
+
+  .event__row > span {
+    min-width: 0;
+    text-align: left;
+  }
+
+  .event__row > span::before {
+    display: block;
+    margin-bottom: 4px;
+    color: var(--amber-dim);
+    font-family: var(--font-mono);
+    font-size: 9px;
+    font-weight: 400;
+    letter-spacing: 0.12em;
+    line-height: 1.2;
+    text-transform: uppercase;
+  }
+
+  .event__session {
+    display: block;
+    font-size: 21px;
+  }
+
+  .event__session::before {
+    content: "Session";
+  }
+
+  .event__venue {
+    grid-column: 1 / -1;
+    font-size: 18px;
+    overflow-wrap: anywhere;
+  }
+
+  .event__venue::before {
+    content: "Location";
+  }
+
+  .event__venue_address {
+    font-size: 13px;
+    line-height: 1.35;
+  }
+
+  .event__city {
+    font-size: 18px;
+  }
+
+  .event__city::before {
+    content: "City";
+  }
+
+  .event__date {
+    font-size: 18px;
+  }
+
+  .event__date:not(:last-child) {
+    grid-column: 1 / -1;
+  }
+
+  .event__date::before {
+    content: "Date";
+  }
+
+  .event__date:last-child {
+    grid-column: 1 / -1;
+  }
+
+  .event__date:last-child::before {
+    content: "Tickets";
+  }
+
+  .event__date:last-child a {
+    display: inline-block;
+    padding: 6px 0;
+  }
 }
 
